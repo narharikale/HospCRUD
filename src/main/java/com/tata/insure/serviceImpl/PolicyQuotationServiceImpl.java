@@ -25,7 +25,6 @@ public class PolicyQuotationServiceImpl implements PolicyQuotationService{
 
 	@Override
 	public PolicyQuotation saveQuotation(PolicyQuotation policyQuotation) {
-		
 		return policyRepository.save(policyQuotation);
 	}
 
