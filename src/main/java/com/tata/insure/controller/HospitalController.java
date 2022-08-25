@@ -24,6 +24,7 @@ public class HospitalController {
 	
 	@PostMapping("/addHospital")
 	public Hospital addHospital(@RequestBody Hospital hospital) {
+		System.out.println("data adding");
 		return service.saveHospital(hospital);
 		}
 	
