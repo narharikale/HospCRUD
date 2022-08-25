@@ -18,16 +18,19 @@ public class QuotationController {
 	@Autowired
 	PolicyQuotationServiceImpl quotationServiceImpl;
 	
+	//api for get quotation by name
 	@GetMapping("/getQuotation/{name}")
 	public PolicyQuotation getQuotation(@PathVariable String name) {
 		return quotationServiceImpl.getQuotation(name);
 	}
 	
+	//api for get quotation by id
 	@GetMapping("/quotaid/{id}")
 	public PolicyQuotation getQuota(@PathVariable int id) {
 		return quotationServiceImpl.getQuota(id);
 	}
 	
+	//api for saving quotation details
 	@PostMapping("/addQuotation")
 	public PolicyQuotation addQuotation(@RequestBody PolicyQuotation policyQuotation) {
 		return quotationServiceImpl.saveQuotation(policyQuotation);
